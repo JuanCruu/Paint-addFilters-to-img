@@ -31,10 +31,12 @@
         <div>
 
             <h1>Paint</h1>
-            <div id="tools">
+            <div id="tools" class="row">
                 <input type="color" onchange="colorLinea(this)">
                 <input type="range" onchange="anchoLinea(this)" max="200" min="1" value="1"><span id="valor">0</span>
+                <input type="button" value="eraser" onclick="eraser()">
                 <input type="button" value="Limpiar" onclick="clear()">
+
             </div>
             <canvas id="paint" width="800 " Height="600"></canvas>
         </div>

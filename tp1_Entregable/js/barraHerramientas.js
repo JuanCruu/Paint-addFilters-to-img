@@ -41,6 +41,10 @@ function anchoLinea(ancho) {
     document.getElementById("valor").innerHTML = ancho.value;
 }
 
-function limpiar() {
+function clear() {
     context.clearRect(0, 0, canvas.width, canvas.height)
+}
+
+function eraser() {
+    context.strokeStyle = "white";
 }
