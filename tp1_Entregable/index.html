@@ -34,22 +34,22 @@
                 <div id="tools" class="row">
                     <input type="color" onchange="colorLinea(this)">
                     <input type="range" onchange="anchoLinea(this)" max="200" min="1" value="1"> <span id="valor">1</span>
-                    <input type="button" value="Pen" onclick="colorLineatemporal()">
-                    <input type="button" value="Eraser" onclick="eraser()">
-                    <input type="button" value="Clean" id="canavas1" onclick="limpiar()">
+                    <input type="button" class="btnBlue" value="Pen" onclick="colorLineatemporal()">
+                    <input type="button" class="btnOrange" value="Eraser" onclick="eraser()">
+                    <input type="button" class="btnDanger" value="Clean" id="canavas1" onclick="limpiar()">
                     <canvas id="paint" width="800 " Height="600"></canvas>
                 </div>
                 <h1>Filtro</h1>
                 <div class="row">
                     <input type="file" id=cargarImagen>
-                    <input type="button" value="Reset" onclick="reset()">
-                    <input type="button" value="Delete" onclick="borrar()">
+                    <input type="button" class="btnTranka" value="Reset" onclick="reset()">
+                    <input type="button" class="btnDanger" value="Delete" onclick="borrar()">
                     <div class="row">
-                        <input type="button" value="blanco y negro" onclick="BlackAndWhite()">
-                        <input type="button" value="Brillo" onclick="brillo()">
-                        <input type="button" value="Negativo" onclick="negativo()">
-                        <input type="button" value="Binarizacion" onclick="binarizacion()">
-                        <input type="button" value="Sepia" onclick="">
+                        <input type="button" class="btnOrange" value="blanco y negro" onclick="BlackAndWhite()">
+                        <input type="button" class="btnOrange" value="Brillo" onclick="brillo()">
+                        <input type="button" class="btnOrange" value="Negativo" onclick="negativo()">
+                        <input type="button" class="btnOrange" value="Binarizacion" onclick="binarizacion()">
+                        <input type="button" class="btnOrange" value="Sepia" onclick="">
                     </div>
                     <div class="row" class="opcionales">
                         <input type="button" class="btnBlue" value="Saturacion" onclick="">

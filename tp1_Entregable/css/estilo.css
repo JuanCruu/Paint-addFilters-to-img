@@ -7,6 +7,18 @@ nav {
     background-color: rgb(157, 157, 255);
 }
 
+.btnOrange {
+    background-color: rgb(251, 201, 144);
+}
+
+.btnDanger {
+    background-color: rgb(253, 74, 74);
+}
+
+.btnTranka {
+    background-color: rgb(80, 255, 74);
+}
+
 .row {
     margin-left: 0px;
 }

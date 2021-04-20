@@ -33,9 +33,11 @@ inputFile.addEventListener("change", function() {
 });
 
 function reset() {
+    if (imgTemporal != null) {
+        ctx.drawImage(imgTemporal, 0, 0, width, height);
+        ctx.putImageData(ctx.getImageData(0, 0, width, height))
 
-    ctx.drawImage(imgTemporal, 0, 0, width, height);
-    ctx.putImageData(ctx.getImageData(0, 0, width, height))
+    }
 }
 
 function borrar() {
