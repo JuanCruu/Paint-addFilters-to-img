@@ -20,27 +20,49 @@
                 <li>
                     <span class="nav-link">
                         <a href="#TP1">
-                           Trabajo Practico 1 Intefaces
+                           Trabajo Practico 1 Intefaces | Alumno Juan Cruz Navarro
                         </a>
                     </span>
                 </li>
             </ul>
         </nav>
     </header>
-    <section>
-        <div>
-
-            <h1>Paint</h1>
-            <div id="tools" class="row">
-                <input type="color" onchange="colorLinea(this)">
-                <input type="range" onchange="anchoLinea(this)" max="200" min="1" value="1"><span id="valor">0</span>
-                <input type="button" value="eraser" onclick="eraser()">
-                <input type="button" value="Limpiar" onclick="clear()">
-
+    <div class="container-fluid">
+        <section>
+            <div>
+                <h1>Paint</h1>
+                <div id="tools" class="row">
+                    <input type="color" onchange="colorLinea(this)">
+                    <input type="range" onchange="anchoLinea(this)" max="200" min="1" value="1"> <span id="valor">1</span>
+                    <input type="button" value="Pen" onclick="colorLineatemporal()">
+                    <input type="button" value="Eraser" onclick="eraser()">
+                    <input type="button" value="Clean" id="canavas1" onclick="limpiar()">
+                    <canvas id="paint" width="800 " Height="600"></canvas>
+                </div>
+                <h1>Filtro</h1>
+                <div class="row">
+                    <input type="file" id=cargarImagen>
+                    <input type="button" value="Reset" onclick="reset()">
+                    <input type="button" value="Delete" onclick="borrar()">
+                    <div class="row">
+                        <input type="button" value="blanco y negro" onclick="BlackAndWhite()">
+                        <input type="button" value="Brillo" onclick="brillo()">
+                        <input type="button" value="Negativo" onclick="negativo()">
+                        <input type="button" value="Binarizacion" onclick="binarizacion()">
+                        <input type="button" value="Sepia" onclick="">
+                    </div>
+                    <div class="row" class="opcionales">
+                        <input type="button" class="btnBlue" value="Saturacion" onclick="">
+                        <input type="button" class="btnBlue" value="Suavizado" onclick="">
+                        <input type="button" class="btnBlue" value="Deteccion de bordes" onclick="">
+                        <input type="button" class="btnBlue" value="Blur" onclick="">
+                    </div>
+                    <canvas id="filtros" width="800 " Height="600"></canvas>
+                </div>
             </div>
-            <canvas id="paint" width="800 " Height="600"></canvas>
-        </div>
-    </section>
+        </section>
+    </div>
+
 
 
     <!-- <footer class="navbar-expand-lg">
@@ -56,6 +78,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Script TRABAJO PRÄCTICO -->
     <script src="js/barraHerramientas.js"></script>
+    <script src="js/filtros.js"></script>
 
 
 

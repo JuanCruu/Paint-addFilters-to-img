@@ -3,9 +3,17 @@ nav {
     padding: 3px;
 }
 
+.btnBlue {
+    background-color: rgb(157, 157, 255);
+}
+
+.row {
+    margin-left: 0px;
+}
+
 h1,
 h2 {
-    margin-top: 100px;
+    margin-top: 45px;
 }
 
 canvas {
@@ -21,8 +29,12 @@ canvas {
 a,
 span,
 .nav-link {
-    color: white;
+    color: black;
     text-decoration: none;
+}
+
+span {
+    padding: 1em;
 }
 
 a:hover {
