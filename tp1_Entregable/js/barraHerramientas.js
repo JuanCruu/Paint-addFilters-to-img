@@ -2,7 +2,7 @@ let canvas = document.getElementById("paint");
 let context = canvas.getContext("2d");
 
 context.lineWidth = 1;
-
+let goma = false;
 let trazo = false;
 let colorTemporal = "black";
 console.log(colorTemporal);
@@ -12,10 +12,12 @@ function draw(event) {
     // y = event.clientY - canvas.offsetTop;
     x = MousePos(canvas, event).x
     y = MousePos(canvas, event).y
+
     if (trazo == true) {
         context.lineTo(x, y);
         context.stroke();
     }
+
 }
 
 function MousePos(canvas, evt) {
@@ -29,10 +31,12 @@ function MousePos(canvas, evt) {
 canvas.addEventListener('mousemove', draw);
 
 canvas.addEventListener('mousedown', function() {
-    trazo = true;
-    context.beginPath();
-    context.moveTo(x, y);
-    canvas.addEventListener('mousemove', draw);
+    if (goma == false) {
+        trazo = true;
+        context.beginPath();
+        context.moveTo(x, y);
+        canvas.addEventListener('mousemove', draw);
+    }
 });
 
 canvas.addEventListener('mouseup', function() {
@@ -49,6 +53,7 @@ function colorLinea(color) {
 }
 
 function colorLineatemporal() {
+    goma = false;
     context.strokeStyle = colorTemporal;
 }
 
@@ -63,4 +68,8 @@ function limpiar() {
 
 function eraser() { //reacer la goma
     context.strokeStyle = "white";
+
+
+
+
 }
