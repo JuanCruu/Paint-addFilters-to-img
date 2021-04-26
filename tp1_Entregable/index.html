@@ -32,7 +32,8 @@
             <div>
                 <h1>Paint</h1>
                 <div id="tools" class="row">
-                    <input type="color" onchange="colorLinea(this)">
+                    <p class=" m-2">Color: <input type="color" onchange="colorLinea(this)">
+                    </p>
                     <input type="range" onchange="anchoLinea(this)" max="200" min="1" value="1"> <span id="valor">1</span>
                     <input type="button" class="btnBlue" value="Pen" onclick="colorLineatemporal()">
                     <input type="button" class="btnOrange" value="Eraser" onclick="eraser()">
@@ -44,6 +45,8 @@
                     <input type="file" id=cargarImagen>
                     <input type="button" class="btnTranka" value="Reset" onclick="reset()">
                     <input type="button" class="btnDanger" value="Delete" onclick="borrar()">
+                    <input type="button" id="descargar" class="btnBlue" value="Descargar">
+
                     <div class="row">
                         <input type="button" class="btnOrange" value="blanco y negro" onclick="BlackAndWhite()">
                         <input type="button" class="btnOrange" value="Brillo" onclick="brillo()">
@@ -54,11 +57,10 @@
                     <div class="row" class="opcionales">
                         <input type="button" class="btnBlue" value="Saturacion" onclick="saturation()">
                         <input type="button" class="btnBlue" value="Deteccion de bordes" onclick="detectarBordes()">
-                        <!-- <input type="button" class="btnBlue" value="Suavizado" onclick=""> -->
-                        <input type="button" class="btnBlue" value="Blur" onclick="setBlur()">
+                        <input type="button" class="btnBlue" value="Blur" onclick="Blur()">
                     </div>
-                    <canvas id="filtros" width="800 " Height="600"></canvas>
                 </div>
+                <canvas id="filtros" width="800 " Height="600"></canvas>
             </div>
         </section>
     </div>

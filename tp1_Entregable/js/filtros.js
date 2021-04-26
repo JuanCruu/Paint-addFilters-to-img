@@ -5,12 +5,14 @@ let width = canvas.width;
 let height = canvas.height;
 
 let imgTemporal;
+let canvasModificado = false
 
 function changeResolution(ancho, alto) {
     width = ancho;
     height = alto;
 }
 inputFile.addEventListener("change", function() {
+    canvasModificado = true;
     var reader = new FileReader();
     reader.onload = () => {
         let img = new Image();
@@ -38,10 +40,19 @@ function reset() {
 
     }
 }
+document.querySelector("#descargar").addEventListener("click", () => {
+    if (canvasModificado != false) {
+        let link = document.createElement('a');
+        link.download = 'index.jpg';
+        link.href = canvas2.toDataURL()
+        link.click();
+    }
+})
 
 function borrar() {
     ctx.clearRect(0, 0, width, height)
     inputFile.value = "";
+    canvasModificado = false;
 
 }
 
@@ -164,7 +175,7 @@ function saturation() {
     ctx.putImageData(imgData, 0, 0)
 }
 
-function setBlur() {
+function Blur() {
     let imgData = ctx.getImageData(0, 0, width, height);
 
     let matrizBlur = [

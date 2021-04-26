@@ -27,7 +27,6 @@ function MousePos(canvas, evt) {
         y: Math.round(evt.clientY - ClientRect.top)
     }
 }
-
 canvas.addEventListener('mousemove', draw);
 
 canvas.addEventListener('mousedown', function() {
